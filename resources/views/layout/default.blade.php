@@ -27,7 +27,10 @@
 		@endforeach
 	@endif	
 
-
+     <!-- Trix Editor -->
+     <link rel="stylesheet" type="text/css" href="/css/trix.css">
+    <script type="text/javascript" src="/js/trix.js"></script>
+    
 </head>
 
 <body>
@@ -65,8 +68,8 @@
                 <img class="logo-compact" src="{{ asset($logoText) }}" alt="">
                 <img class="brand-title" src="{{ asset($logoText) }}" alt="">
 			@else
-                <img class="logo-compact" src="{{ asset('images/posyandu.png') }}" alt="">
-                <img class="brand-title" src="{{ asset('images/posyandu.png') }}" alt="">
+                <img class="logo-compact" src="{{ asset('images/logo-babydaily-text.png') }}" alt="">
+                <img class="brand-title" src="{{ asset('images/logo-babydaily-text.png') }}" alt="">
 			@endif	
             </a>
 
@@ -84,8 +87,11 @@
             Header start
         ***********************************-->
         
-		@include('elements.header')
-		
+        @if(auth()->user()->role == 'Admin')
+		    @include('elements.header-admin')
+        @elseif(auth()->user()->role == 'Kader')
+            @include('elements.header')
+		@endif
 		
         <!--**********************************
             Header end ti-comment-alt
@@ -94,7 +100,11 @@
         <!--**********************************
             Sidebar start
         ***********************************-->
-        @include('elements.sidebar')
+        @if(auth()->user()->role == 'Admin')
+            @include('elements.sidebar-admin')
+        @elseif(auth()->user()->role == 'Kader')
+            @include('elements.sidebar')
+        @endif
         <!--**********************************
             Sidebar end
         ***********************************-->

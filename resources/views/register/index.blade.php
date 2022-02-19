@@ -29,7 +29,7 @@
                         <div class="form-group">
                             <label class="mb-1 text-black"><strong>Nama Lengkap</strong></label>
                             <input type="text" class="form-control @error('nama_lengkap') is-invalid @enderror" placeholder="Nama Lengkap" id="nama_lengkap" name="nama_lengkap" required>
-                            @error('nomor_telepon')
+                            @error('nama_lengkap')
                             <div class="invalid-feedback">
                                 Nama Lengkap perlu diisi
                             </div>

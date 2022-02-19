@@ -22,9 +22,7 @@
                 </span>
                 <div class="media-body ml-1">
                   <p class="mb-2">Posyandu</p>
-                  @foreach ($posyandu as $psy)
-                  <h3 class="mb-0 text-black font-w600">{{$psy->posyandu}}</h3>
-                  @endforeach
+                  <h3 class="mb-0 text-black font-w600">{{$posyandu}}</h3>
                 </div>
               </div>
             </div>
@@ -35,13 +33,14 @@
             <div class="card-body">
               <div class="media align-items-center">
                 <span class="mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="51" height="53" fill="#E8D843" class="bi bi-balloon" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M8 9.984C10.403 9.506 12 7.48 12 5a4 4 0 0 0-8 0c0 2.48 1.597 4.506 4 4.984ZM13 5c0 2.837-1.789 5.227-4.52 5.901l.244.487a.25.25 0 1 1-.448.224l-.008-.017c.008.11.02.202.037.29.054.27.161.488.419 1.003.288.578.235 1.15.076 1.629-.157.469-.422.867-.588 1.115l-.004.007a.25.25 0 1 1-.416-.278c.168-.252.4-.6.533-1.003.133-.396.163-.824-.049-1.246l-.013-.028c-.24-.48-.38-.758-.448-1.102a3.177 3.177 0 0 1-.052-.45l-.04.08a.25.25 0 1 1-.447-.224l.244-.487C4.789 10.227 3 7.837 3 5a5 5 0 0 1 10 0Zm-6.938-.495a2.003 2.003 0 0 1 1.443-1.443C7.773 2.994 8 2.776 8 2.5c0-.276-.226-.504-.498-.459a3.003 3.003 0 0 0-2.46 2.461c-.046.272.182.498.458.498s.494-.227.562-.495Z"/>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="51" height="53" fill="#E8D843" class="bi bi-person-badge" viewBox="0 0 16 16">
+                    <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0h-7zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492V2.5z"/>
                   </svg>
                 </span>
                 <div class="media-body ml-1">
-                  <p class="mb-2">Balita</p>
-                  <h3 class="mb-0 text-black font-w600">{{$balita}}</h3>
+                  <p class="mb-2">Kader</p>
+                  <h3 class="mb-0 text-black font-w600">{{$kader}}</h3>
                 </div>
               </div>
             </div>
@@ -52,16 +51,14 @@
             <div class="card-body">
               <div class="media align-items-center">
                 <span class="mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="51" height="52" fill="#2D899C" class="bi bi-journal-check" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
-                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" fill="#2D899C" class="bi bi-people" viewBox="0 0 16 16">
+                    <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
                   </svg>
                 </span>
                 <div class="media-body ml-1">
-                  <p class="mb-2">Secari</p>
+                  <p class="mb-2">Orang Tua</p>
                   <div class="d-flex align-items-center">
-                    <h3 class="mb-0 mr-3 text-black font-w600">{{$kehadiran}}</h3>
+                    <h3 class="mb-0 mr-3 text-black font-w600">{{$ortu}}</h3>
                   </div>
                 </div>
               </div>
@@ -107,7 +104,7 @@
               </div>
             </div>
           </div>
-    </div>  
+    </div>
   </div>
 </div>
 

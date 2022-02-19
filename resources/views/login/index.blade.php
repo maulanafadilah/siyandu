@@ -41,7 +41,7 @@
                           <label class="mb-1 text-black"><strong>Kata Sandi</strong></label>
                           <input type="password" class="form-control" placeholder="Kata Sandi" id="password" name="password" required>
                       </div>
-                      <input type="hidden" id="role" name="role" value="Kader">
+                      <!-- <input type="hidden" id="role" name="role" value="Kader"> -->
                       <div class="form-row d-flex justify-content-between mt-4 mb-2">
                           <div class="form-group  ml-2">
                                 <label class="text-secondary">Lupa Kata Sandi?</label>

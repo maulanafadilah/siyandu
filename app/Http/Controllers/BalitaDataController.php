@@ -51,8 +51,8 @@ class BalitaDataController extends Controller
 
             'nama_lengkap' => 'required',
             'no_kk' => 'required',
-            'nik' => 'required',
-            'tempat_lahir' => 'required|unique:balitas',
+            'nik' => 'required|unique:balitas',
+            'tempat_lahir' => 'required',
             'tanggal_lahir' => 'required|date',
             'jenis_kelamin' => 'required',
             'ibu' => 'required',
@@ -156,4 +156,7 @@ class BalitaDataController extends Controller
 
         return redirect('/balita')->with('success', 'Data balita berhasil dihapus!');
     }
+
+    
+    
 }

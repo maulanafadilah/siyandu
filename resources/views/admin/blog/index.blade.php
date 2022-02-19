@@ -10,7 +10,7 @@
   
   <div class="page-titles">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item active"><a href="javascript:void(0)">Balita</a></li>
+      <li class="breadcrumb-item active"><a href="javascript:void(0)">Blog</a></li>
     </ol>
   </div>
   <!-- row -->
@@ -28,9 +28,9 @@
     <div class="col-lg-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Daftar Balita</h4>
+          <h4 class="card-title">Daftar Blog</h4>
           <div class="float-right">
-            <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='/balita/create'">Tambah Balita</button>
+            <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='/blog/create'">Tambah Blog</button>
           </div>
         </div>
         <div class="card-body">
@@ -38,29 +38,24 @@
             <table id="example-3" class="display min-w850">
               <thead>
                 <tr>
-                  <th>NIK</th>
-                  <th>Nama Lengkap</th>
-                  <th>Tanggal Lahir</th>
-                  <th>Ibu</th>
-                  <th>Ayah</th>
-                  <th>Alamat (RT/RW)</th>
-                  <th>Aksi</th>
+                  <th></th>
+                  <th>Judul</th>
+                  <th>Tanggal</th>
+                  <th>Penulis</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
-                @foreach ($balita as $balita)
+              @foreach ($blog as $item)
                 <tr>
-                  <td>{{$balita->nik}}</td>
-                  <td><a href="/balita/{{ $balita->id }}"><strong class="text-black">{{$balita->nama_lengkap}}</strong></a></td>
-                  <td>{{$balita->tanggal_lahir}}</td>
-                  <td>{{$balita->ibu}}</td>
-                  <td>{{$balita->ayah}}</td>
-                  <td>{{$balita->alamat}}</td>
+                  <td><img class="rounded-circle" width="35" height="35" src="{{asset('storage/'.$item->gambar)}}" alt=""></td>
+                  <td><a href="/blog/{{$item->id}}"><strong class="text-black">{{$item->judul}}</strong></a></td>
+                  <td>{{$item->tanggal}}</td>
+                  <td>{{$item->penulis}}</td>
                   <td>
                     <div class="d-flex">
-                      <a href="/balita/{{$balita->id}}" class="btn btn-info shadow btn-xs sharp mr-1"><i class="fa fa-eye"></i></a>
-                      <a href="/balita/{{$balita->id}}/edit" class="btn btn-warning shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
-                      <form action="/balita/{{$balita->id}}" method="post">
+                      <a href="/blog/{{$item->id}}/edit" class="btn btn-info shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                      <form action="/blog/{{$item->id}}" method="post">
                         @method('delete')
                         @csrf
                         <button class="btn btn-danger shadow btn-xs sharp" onclick="return confirm('Apakah yakin ingin dihapus?')"><i class="fa fa-trash"></i></button>
@@ -68,7 +63,7 @@
                     </div>												
                   </td>												
                 </tr>
-                @endforeach
+              @endforeach
               </tbody>
             </table>
           </div>

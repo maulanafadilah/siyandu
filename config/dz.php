@@ -620,7 +620,7 @@ return [
               'js/custom.js',
               'js/deznav-init.js',
 				],
-				'page_error_403' => [
+				'error' => [
               'vendor/bootstrap-select/dist/js/bootstrap-select.min.js',
               'js/custom.js',
               'js/deznav-init.js',
