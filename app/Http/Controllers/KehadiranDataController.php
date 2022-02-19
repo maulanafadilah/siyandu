@@ -57,6 +57,7 @@ class KehadiranDataController extends Controller
         
         Kehadiran::create($validatedData);
 
+            // dd($validatedData);
         return redirect('/kehadiran')->with('success', 'Berhasil Menambah Data Secari!');
     }
 

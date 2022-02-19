@@ -92,14 +92,7 @@
                     <img src="{{asset('storage/'.$item->gambar)}}" alt="">
                     <div class="info">
                       <p class="fs-18 font-w600"><a href="{!! url('#'); !!}" class="text-black">{{$item->judul}}</a></p>
-                      <span class="fs-14 text-black d-block mb-3">{{$item->tanggal}}</span>
-                      <!-- <p class="fs-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini</p> -->
-                      <!-- <ul>
-                        <li><i class="las la-dollar-sign"></i>$124,00</li>
-                        <li><i class="las la-calendar"></i>June 20, 2020</li>
-                        <li><i class="fa fa-ticket"></i>561 pcs</li>
-                        <li><i class="las la-clock"></i>08:35 AM</li>
-                      </ul> -->
+                      <span class="fs-14 text-black d-block mb-3">{{$item->tanggal}}</span>                      
                     </div>
                   </div>
                 </div>

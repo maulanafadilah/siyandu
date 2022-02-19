@@ -182,10 +182,11 @@
                   <div class="col-lg-12">
                     <div class="card">
                       <div class="card-header">
-                        <h4 class="card-title">Line chart with tooltips</h4>
+                        <h4 class="card-title">KMS</h4>
                       </div>
                       <div class="card-body">
-                        <div id="line-chart-tooltips" class="ct-chart ct-golden-section chartlist-chart"></div>
+                        {{-- <div id="line-chart-tooltips" class="ct-chart ct-golden-section chartlist-chart"></div> --}}
+                        @include('balita.line_chart')
                       </div>
                     </div>
                   </div>
