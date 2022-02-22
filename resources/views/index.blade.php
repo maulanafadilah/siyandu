@@ -91,7 +91,7 @@
                   <div class="image-bx">
                     <img src="{{asset('storage/'.$item->gambar)}}" alt="">
                     <div class="info">
-                      <p class="fs-18 font-w600"><a href="{!! url('#'); !!}" class="text-black">{{$item->judul}}</a></p>
+                      <p class="fs-18 font-w600"><a href="/blog/{{$item->id}}" class="text-black">{{$item->judul}}</a></p>
                       <span class="fs-14 text-black d-block mb-3">{{$item->tanggal}}</span>                      
                     </div>
                   </div>

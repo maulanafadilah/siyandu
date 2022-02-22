@@ -18,7 +18,9 @@ class KehadiranDataController extends Controller
         $page_description = 'Daftar Secari';
 		$action = __FUNCTION__;
         
-        $kehadiran = Kehadiran::where('posyandu', auth()->user()->posyandu)->get();
+        $kehadiran = Kehadiran::where('posyandu', auth()->user()->posyandu)->orderby('tanggal', 'desc')->get();
+
+        // return $kehadiran;
 
         return view('kehadiran.index', compact('page_title', 'page_description','action'), ['kehadiran'=>$kehadiran]);
     }

@@ -9,7 +9,7 @@
 <div class="container-fluid">
   <div class="page-titles">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item active"><a href="javascript:void(0)">Secari</a></li>
+      <li class="breadcrumb-item active"><a href="javascript:void(0)">Posyandu</a></li>
     </ol>
   </div>
   <!-- row -->

@@ -31,14 +31,15 @@
             <table id="example-5" class="display min-w850">
               <thead>
                 <tr>
-                  <th>
+                  <!-- <th>
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input" id="checkAll" required="">
                       <label class="custom-control-label" for="checkAll"></label>
                     </div>
-                  </th>
-                  <th>NIK</th>
+                  </th> -->
+                  <th>No</th>
                   <th>Tanggal</th>
+                  <th>NIK</th>
                   <th>Nama Anak</th>
                   <th>Usia</th>
                   <th>Tinggi</th>
@@ -50,16 +51,18 @@
                 </tr>
               </thead>
               <tbody>
+              <?php $i = 1 ?>
                 @foreach ($kehadiran as $kehadiran)
                 <tr>
-                  <td>
+                  <!-- <td>
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input" id="customCheckBox2" required="">
                       <label class="custom-control-label" for="customCheckBox2"></label>
                     </div>
-                  </td>
-                  <td>{{$kehadiran->nik}}</td>
+                  </td> -->
+                  <td>{{$i}}</td>
                   <td>{{$kehadiran->tanggal}}</td>
+                  <td>{{$kehadiran->nik}}</td>
                   <td>{{$kehadiran->nama_lengkap}}</td>
                   <td>{{$kehadiran->usia}}</td>
                   <td>{{$kehadiran->tinggi}}</td>
@@ -83,6 +86,7 @@
                     </div>
                   </td>												
                 </tr>
+                <?php $i++ ?>
                 @endforeach
               </tbody>
             </table>

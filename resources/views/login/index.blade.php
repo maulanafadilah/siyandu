@@ -28,7 +28,7 @@
           <div class="col-xl-12" style="background-color: #F0F0F0;">
               <div class="auth-form">
                   <div class="text-center mb-3">
-                    <a href="/"><img src="{{ asset('images/logo-babydaily-full-blue.png') }}" alt=""></a>
+                    <a href="/"><img src="{{ asset('images/logo-rancatungku.png') }}" alt=""></a>
                   </div>
                   <h4 class="text-center mb-4 text-black">Masuk sebagai Kader Posyandu</h4>
                   <form action="/login" method="post">

@@ -9,7 +9,7 @@
 <div class="container-fluid">
   <div class="page-titles">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="javascript:void(0)">Balita</a></li>
+      <li class="breadcrumb-item"><a href="/balita">Balita</a></li>
       <li class="breadcrumb-item active"><a href="javascript:void(0)">Edit Balita</a></li>
     </ol>
   </div>

@@ -31,6 +31,8 @@ Route::resource('/posyandu', PosyanduDataController::class)->middleware('auth');
 Route::resource('/blog', BlogDataController::class)->middleware('auth');
 Route::resource('/laporan', LaporanDataController::class)->middleware('auth');
 
+Route::get('/export/{new_id}', [LaporanDataController::class, 'export']);
+
 Route::get('/login', 'App\Http\Controllers\LoginController@index')->name('login')->middleware('guest');
 Route::post('/login', 'App\Http\Controllers\LoginController@authenticate');
 Route::post('/logout', 'App\Http\Controllers\LoginController@logout');

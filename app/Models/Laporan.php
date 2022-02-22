@@ -10,6 +10,7 @@ class Laporan extends Model
     use HasFactory;
 
     protected $fillable = [
+        "posyandu",
         "tanggal_awal",
         "tanggal_akhir",
     ];

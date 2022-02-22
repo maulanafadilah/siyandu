@@ -28,7 +28,7 @@
     <div class="col-lg-12">
       <div class="card">
         <div class="card-header">
-          <h4 class="card-title">Daftar Balita</h4>
+          <h4 class="card-title">Daftar Laporan</h4>
           <div class="float-right">
             <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href='/laporan/create'">Buat Laporan</button>
           </div>
@@ -38,21 +38,32 @@
             <table id="example-3" class="display min-w850">
               <thead>
                 <tr>
-                  <th>Rentang Tanggal Kegiatan</th>
+                  <th>No</th>
+                  
+                  <th>Bulan Kegiatan</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
               <tbody>
-              @foreach ($laporan as $item)
+              
+              <?php $i = 1 ?>
+              @foreach ($laporan as $key => $row)
+              
                 <tr>
-                  <td>{{$item->tanggal_awal}} sampai {{$item->tanggal_akhir}}</td>
+                  <td>{{$i}}</td>
+                  
+                  <td>{{$month[$key]->tanggal_awal}} {{$year[$key]->tanggal_awal}}</td>
                   <td>
+                  
                     <div class="d-flex">
-                      <a href="/laporan/{{$item->id}}" class="btn btn-info shadow btn-xs sharp mr-1"><i class="fa fa-eye"></i></a>
+                      <a href="/laporan/{{$row->id}}" class="btn btn-info shadow btn-xs sharp mr-1"><i class="fa fa-eye"></i></a>
                     </div>												
+                    <?php $i++ ?>
                   </td>												
                 </tr>
                 @endforeach
+                
+                
               </tbody>
             </table>
           </div>
